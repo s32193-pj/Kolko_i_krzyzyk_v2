@@ -127,7 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Field_Display.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Game_Resolver.cpp" />
+    <ClCompile Include="You_Are_The_Chosen_Field.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Field_Display.h" />

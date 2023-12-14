@@ -39,14 +39,17 @@ int main()
 			cout << endl << "Gracz O wygral." << endl;
 			continue_loop = false;
 			break;
+			
 		case 1:
 			cout << endl << "Gracz X wygral." << endl;
 			continue_loop = false;
 			break;
+			
 		case 2:
 			cout << endl << "AD MORTEM INIMICUS." << endl;
 			continue_loop = false;
 			break;
+			
 		}
 
 		choose_field(player_index, playing_field, player_symbol, player);
