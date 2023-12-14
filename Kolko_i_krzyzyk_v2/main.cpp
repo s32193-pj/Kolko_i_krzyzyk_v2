@@ -8,7 +8,6 @@ using namespace std;
 int main()
 {
 	char playing_field[9] = { 49,50,51,52,53,54,55,56,57};
-	int player[2] = { 1,2 };
 	int turn = 1;
 	bool continue_loop = true;
 	display_field(playing_field);
@@ -23,12 +22,12 @@ int main()
 		
 		if (turn%2 == 0)
 		{
-			player_index = 1;
+			player_index = 2;
 			player_symbol = 79;
 		}
 		else
 		{
-			player_index = 0;
+			player_index = 1;
 			player_symbol = 88;
 		}
 		int game_ended = is_game_resolved(turn,playing_field,player_symbol);
@@ -44,15 +43,13 @@ int main()
 			cout << endl << "Gracz X wygral." << endl;
 			continue_loop = false;
 			break;
-			
 		case 2:
 			cout << endl << "AD MORTEM INIMICUS." << endl;
 			continue_loop = false;
 			break;
-			
 		}
 
-		choose_field(player_index, playing_field, player_symbol, player);
+		choose_field(player_index, playing_field, player_symbol);
 			
 		
 		
