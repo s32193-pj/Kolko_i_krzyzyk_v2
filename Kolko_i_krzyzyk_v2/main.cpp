@@ -48,8 +48,10 @@ int main()
 			break;
 		}
 		
-		choose_field(player_index, playing_field, player_symbol);
+		int field;
+		field = choose_field(player_index, playing_field, player_symbol);
 		display_field(playing_field);
+		cout << endl << "Gracz " << char(player_symbol) << " wybral pole: " << field << endl;
 		
 		turn++;
 	}

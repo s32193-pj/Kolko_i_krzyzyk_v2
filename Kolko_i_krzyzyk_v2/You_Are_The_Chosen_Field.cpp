@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-void choose_field(int player_index, char playing_field[9], int player_symbol)
+int choose_field(int player_index, char playing_field[9], int player_symbol)
 {
 	bool field_ok = false;
-	int chosen_field;
+	int chosen_field = 0;
 
 
 	while (field_ok == false) {
@@ -21,5 +21,5 @@ void choose_field(int player_index, char playing_field[9], int player_symbol)
 	}
 
 	playing_field[chosen_field - 1] = player_symbol;
-
+	return chosen_field;
 }
