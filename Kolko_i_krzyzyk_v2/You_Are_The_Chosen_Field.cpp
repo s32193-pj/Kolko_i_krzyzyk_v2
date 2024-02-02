@@ -8,11 +8,18 @@ int choose_field(int player_index, char playing_field[9], int player_symbol)
 
 
 	while (field_ok == false) {
+	
 		cout << endl << "Ruch gracza " << player_index << " : ";
 		cin >> chosen_field;
-		if (playing_field[chosen_field - 1] == 79 || playing_field[chosen_field - 1] == 88)
+
+		if (cin.fail()) {
+			cin.clear();
+			cin.ignore();
+		}
+
+		if (playing_field[chosen_field - 1] == 79 || playing_field[chosen_field - 1] == 88 || chosen_field > 9 || chosen_field < 1)
 		{
-			cout << endl << "Pole niedostepne." << endl;
+			cout << endl << "Ruch niezgodny z zasadami. Wybierz pole ponownie." << endl;
 		}
 		else
 		{
